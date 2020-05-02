@@ -1,0 +1,29 @@
+@import "./variables-mobile";
+
+body{
+    background-color:#FFFFFF;
+}
+
+a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #060A24;
+}
+
+p{
+    font-family: $p-font;
+}
+
+h1 {
+    font-family: $h1-font;
+}
+
+.world {
+    text-decoration: line-through
+}
+
+.button {
+    a{
+        text-transform: uppercase;
+    }
+}

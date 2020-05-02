@@ -1,0 +1,39 @@
+body {
+  background-color: #FFFFFF;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #060A24;
+}
+
+p {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.world {
+  text-decoration: line-through;
+}
+
+.button a {
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: red;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=styles.css.map */

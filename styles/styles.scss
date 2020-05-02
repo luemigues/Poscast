@@ -1,0 +1,15 @@
+
+@import "./mobile/mobile";
+
+$breakpoint-desktop: 768px;
+@media screen and (min-width: $breakpoint-desktop){
+    @import "./desktop/desktop";
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
