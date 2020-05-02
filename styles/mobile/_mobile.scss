@@ -1,9 +1,13 @@
 @import "./variables-mobile";
 
+// MAIN STRUCTURE
+
 body{
     background-color:#FFFFFF;
+    width: 100vw;
 }
 
+// TEXT STYLE
 a{
     text-transform: uppercase;
     text-decoration: none;
@@ -18,18 +22,67 @@ h1 {
     font-family: $h1-font;
 }
 
-.world {
-    text-decoration: line-through
-}
-
+// BUTTONS
 .button {
     a{
         text-transform: uppercase;
     }
 }
 
-.hero {
-    background-color: black;
-}
 
 // HEADER
+
+header {
+    height: 44px;
+    width: 100%;
+    
+    nav{
+        display: none;
+        background-color: blue;
+        height: 224px;
+    }
+
+    nav input:checked  {
+        display: block;
+        
+    }
+}
+
+.icons-container{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+
+}
+
+
+.menu-icons{
+    height: inherit;
+    display: flex;
+    align-items: center;
+   
+    input {
+        display:none;
+    }
+
+    input:checked ~label > .ham {
+        display: none;
+    }
+
+    input:checked ~ label> .times {
+        display: block;
+    }
+
+    .times{
+        display: none;
+    }
+}
+   
+
+// HERO
+
+.world {
+    text-decoration: line-through;
+}

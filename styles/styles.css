@@ -1,5 +1,6 @@
 body {
   background-color: #FFFFFF;
+  width: 100vw;
 }
 
 a {
@@ -16,16 +17,67 @@ h1 {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
-.world {
-  text-decoration: line-through;
-}
-
 .button a {
   text-transform: uppercase;
 }
 
-.hero {
-  background-color: black;
+header {
+  height: 44px;
+  width: 100%;
+}
+
+header nav {
+  display: none;
+  background-color: blue;
+  height: 224px;
+}
+
+header nav input:checked {
+  display: block;
+}
+
+.icons-container {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 16px;
+}
+
+.menu-icons {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-icons input {
+  display: none;
+}
+
+.menu-icons input:checked ~ label > .ham {
+  display: none;
+}
+
+.menu-icons input:checked ~ label > .times {
+  display: block;
+}
+
+.menu-icons .times {
+  display: none;
+}
+
+.world {
+  text-decoration: line-through;
 }
 
 @media screen and (min-width: 768px) {
