@@ -35,51 +35,64 @@ h1 {
 header {
     height: 44px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     
+    .logo{
+        margin-left: 16px;
+        width: 24px;
+        height: 24px;
+    }
+    label > div{
+        margin-right: 16px;
+        text-align: center;
+        line-height: 28px;
+        font-size: 18px;
+        width: 24px;
+        height: 24px;
+
+    }
+        
+    input {
+         display:none;
+    }   
+        
+    input:checked ~ label > .ham {
+         display: none;
+    }
+        
+    input:checked ~ label > .times {
+        display: block;
+    }
+
+    input:checked ~ label{
+       padding:  13px 0;
+    }
+        
+    .times{
+        display: none;
+     }
+        
     nav{
         display: none;
         background-color: blue;
         height: 224px;
+        width: 100%;
     }
 
-    nav input:checked  {
+    input:checked ~ nav {
         display: block;
-        
-    }
-}
-
-.icons-container{
-    height: inherit;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 16px;
-
-}
-
-
-.menu-icons{
-    height: inherit;
-    display: flex;
-    align-items: center;
-   
-    input {
-        display:none;
+        align-self: flex-start;
+        background-color: blue;
+        height: 224px;
+        z-index: 10;
     }
 
-    input:checked ~label > .ham {
-        display: none;
     }
-
-    input:checked ~ label> .times {
-        display: block;
-    }
-
-    .times{
-        display: none;
-    }
-}
-   
+    
+    
 
 // HERO
 
