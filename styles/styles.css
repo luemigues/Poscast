@@ -6,32 +6,78 @@
   max-width: 100vw;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: #FFFFFF;
-  width: 100vw;
+  max-width: 100vw;
+}
+
+h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+p {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 a {
   text-transform: uppercase;
   text-decoration: none;
-  color: #060A24;
 }
 
-p {
-  font-family: "IBM Plex Mono", monospace;
-}
-
-h1 {
-  font-family: "IBM Plex Sans", sans-serif;
+.button {
+  height: 3rem;
+  width: 18rem;
+  margin: 0 auto;
+  background: #00f3bb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .button a {
+  width: inherit;
+  padding: 13px 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
   text-transform: uppercase;
+  color: #060a24;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.button :hover {
+  background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+  color: white;
+  -webkit-transition: 0.5s all linear;
+  transition: 0.5s all linear;
 }
 
 header {
   height: 44px;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,63 +92,195 @@ header {
 }
 
 header .logo {
-  margin-left: 16px;
+  width: 24px;
+  height: 24px;
+  margin-left: 1rem;
+}
+
+header label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1rem;
+}
+
+header label div {
+  margin-left: inherit;
+  text-align: center;
   width: 24px;
   height: 24px;
 }
 
-header label > div {
-  margin-right: 16px;
-  text-align: center;
-  line-height: 28px;
-  font-size: 18px;
-  width: 24px;
-  height: 24px;
+header label .times {
+  display: none;
 }
 
 header input {
   display: none;
 }
 
-header input:checked ~ label > .ham {
-  display: none;
-}
-
-header input:checked ~ label > .times {
-  display: block;
-}
-
 header input:checked ~ label {
-  padding: 13px 0;
+  height: inherit;
 }
 
-header .times {
+header input:checked ~ label .material-icons.md-18 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+header input:checked ~ label .ham {
   display: none;
+}
+
+header input:checked ~ label .times {
+  display: block;
+  height: 24px;
 }
 
 header nav {
   display: none;
-  background-color: blue;
   height: 224px;
   width: 100%;
 }
 
 header input:checked ~ nav {
   display: block;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  background-color: blue;
+  -ms-grid-column-align: self-start;
+      justify-self: self-start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #0000ec;
   height: 224px;
   z-index: 10;
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 
-.world {
-  text-decoration: line-through;
+header input:checked ~ nav ul {
+  list-style-type: none;
+}
+
+header input:checked ~ nav ul li {
+  text-decoration: none;
+  padding-bottom: 24px;
+}
+
+header input:checked ~ nav ul li a {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: white;
+  padding-top: 6px 214px 6px 0px;
+}
+
+main {
+  margin-top: 13px;
+}
+
+.hero {
+  color: #060a24;
+  margin: 0 1rem;
+}
+
+.hero h1 {
+  margin: 1rem;
+}
+
+.hero h1 .hello {
+  display: block;
+}
+
+.hero p {
+  margin: 1rem;
+  text-align: justify;
+}
+
+.hero .button {
+  margin-top: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.episodios {
+  padding: 4em 1em;
+  height: 78rem;
+  -webkit-clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+          clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+  background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+}
+
+.episodios h2 {
+  color: white;
+  margin-bottom: 21px;
+}
+
+.episodios .podcast div {
+  margin: 18px auto;
+  height: 225px;
+}
+
+.nosotros {
+  margin: 0 1em;
+  position: relative;
+  top: -95.5px;
+  margin-bottom: -95.5px;
+}
+
+.nosotros h2 {
+  color: #060a24;
+  margin-bottom: 21px;
+  margin-bottom: 0.5rem;
+}
+
+.nosotros div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 27px;
+}
+
+.nosotros div img {
+  height: 519px;
+  width: 360px;
+}
+
+.entrevistas {
+  margin-top: 54px;
+}
+
+.entrevistas h2 {
+  margin: 1rem;
+  color: #060a24;
+}
+
+.entrevistas .inivtados {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.entrevistas .inivtados img {
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 768px) {
   body {
-    background-color: red;
+    background-color: lightgrey;
   }
 }
 /*# sourceMappingURL=styles.css.map */
