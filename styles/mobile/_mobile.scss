@@ -1,35 +1,285 @@
 @import "./variables-mobile";
 
+// MAIN STRUCTURE
+
+html{
+    font-size: 16px;
+}
+
 body{
     background-color:#FFFFFF;
+    max-width: 100vw;
 }
 
-a{
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #060A24;
-}
-
-p{
-    font-family: $p-font;
-}
+// TEXT STYLE
 
 h1 {
-    font-family: $h1-font;
+    // text-syles
+font-family: $h1-font;
+font-size: map-get($font-size,"h1");
+font-weight: map-get($font-weight,"h1");
+line-height: map-get($line-height,"h1");
+
 }
 
-.world {
-    text-decoration: line-through
+h2 {
+    font-family: $h2-font;
+    font-size: map-get($font-size, "h2" );
+    font-weight: map-get($font-weight, "h2" );
+    line-height: map-get($line-height, "h2" );
 }
 
+p {
+    font-family: $p-font;
+    font-size: map-get($font-size, "p" );
+    font-weight: map-get($font-weight, "p" );
+    line-height: map-get($line-height, "p" );
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+
+// BUTTONS
 .button {
-    a{
+        height: 3rem;
+        width: 18rem;
+        margin: 0 auto;
+        background: map-get($button-background ,"normal");
+        display: flex;
+        justify-content: center;
+        
+
+    a { 
+        width: inherit;
+        padding: 13px 0;
+        align-self: center;
+        text-align: center;
         text-transform: uppercase;
+        color: map-get($button-color ,"normal");
+        font-family: $button-font;
+        font-size: map-get($font-size, "button" );
+        font-weight: map-get($font-weight, "button" );
+        line-height: map-get($line-height, "button" );
+    }
+    
+    :hover {
+        background: map-get($button-background ,"hover");
+        color: map-get($button-color ,"hover");
+        transition: 0.5s all linear;
     }
 }
 
-.hero {
-    background-color: black;
-}
+
 
 // HEADER
+
+header {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+    .logo{     
+        width: 24px;
+        height: 24px;
+        margin-left: 1rem;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+        
+
+
+         div{
+            margin-left: inherit;
+            text-align: center;
+            width: 24px;
+            height: 24px;
+        }
+
+        .times{
+            display: none;
+         }
+    }
+        
+    input {
+         display:none;
+    }   
+        
+    input:checked ~ label {
+       
+        height: inherit;
+        
+        .material-icons.md-18 { 
+            font-size: 18px;
+            line-height: 24px;
+         }
+
+        .ham {
+            display: none;
+       }
+        
+        .times {
+        display: block;
+        height: 24px;
+        }
+    }    
+        
+    nav {
+        display: none;
+        height: 224px;
+        width: 100%;        
+    }
+    
+    input:checked ~ nav {
+        display: block;
+        justify-self: self-start;
+        align-self: center;
+        background-color: $background-nav-mobile;
+        height: 224px;
+        z-index: 10;
+
+        padding-top: 1rem;
+        padding-left: 1rem;
+        
+                ul{
+                    list-style-type: none;
+                   
+                    li{
+                        text-decoration: none;
+                        padding-bottom: 24px;
+
+                        a{
+                            // Nav-text
+                            font-family: $button-font;
+                            font-size: map-get($font-size , "nav");
+                            font-weight: map-get($font-weight , "nav" );
+                            line-height: map-get($line-height, "nav");
+                            color: map-get($text-color,"darkbackground");
+
+                            padding-top: 6px 214px 6px 0px;
+                        }
+            
+                    }
+                }
+    }
+}
+    
+
+// HERO
+ main{
+     margin-top: 13px;
+ }
+
+.hero{
+
+    color: map-get($text-color, "lightbackground");
+    margin: 0 1rem;
+
+   h1{
+    margin: 1rem;
+
+        .hello {
+            display: block;
+        }
+    }   
+
+    p{
+        margin: 1rem;
+        text-align: justify;
+    }
+
+    .button {
+        margin-top: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+       
+}
+
+// PODCAST - EPISODIOS
+
+.episodios{
+
+    padding: 4em 1em;
+    height: 78rem;
+    clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+    background: $background-gradient;
+
+    h2{
+        color: map-get($text-color, "darkbackground" );
+        margin-bottom: 21px;
+    }
+
+    .podcast {
+
+            div{
+                margin: 18px auto;
+                height: 225px;
+            }
+    }
+
+}
+
+// NOSOTROS- DE DONDE VENIMOS
+
+.nosotros{
+    margin: 0 1em;
+    position: relative;
+    top: -95.5px;
+    margin-bottom: -95.5px;
+
+
+    h2{
+        color: map-get($text-color, "lightbackground" );
+        margin-bottom: 21px;
+        margin-bottom: 0.5rem;
+    }
+
+    div {
+
+        display: flex;
+        justify-content: center;
+        margin-bottom: 27px;
+
+        img {
+            height: 519px;
+            width: 360px;
+        }
+    }
+
+    p{
+        text-align: justify;
+    }
+
+}
+
+.entrevistas{
+
+    margin-top: 54px;
+
+    h2{
+        margin: 1rem;
+        color: map-get($text-color, "lightbackground" );
+    }
+
+    .inivtados{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        
+
+            img{
+                margin: 0;
+                padding: 0;
+            }
+    }
+}
+
