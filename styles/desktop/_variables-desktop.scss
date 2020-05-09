@@ -1,5 +1,59 @@
 
+$font-size:(
+    "h1": 64px,
+    "h2": 48px,
+    "h3": 24px,
+    "p": 16px,
+    "button": 18px,
+    "nav": 16px
+);
 
+$text-color:(
+    "darkbackground": rgba(255,255,255,1),
+    "lightbackground":rgba(6,10,36,1)   
+);
+
+// font-family
+$h1-font: 'IBM Plex Sans', sans-serif;
+$h2-font:'IBM Plex Sans', sans-serif;
+$h3-font: 'IBM Plex Sans', sans-serif;
+$p-font: 'IBM Plex Mono', monospace;
+$nav-font: 'IBM Plex Mono', monospace;
+$button-font: 'IBM Plex Mono', monospace;
+
+// Font-weight
+$font-weight: (
+    "h1": 400,
+    "h2": 400,
+    "h3": 600,
+    "p": 400,
+    "button": 500,
+    "nav": 400
+);
+
+// Line spacing
+$line-height: (
+    "h1": 84px,
+    "h2": 62px,
+    "h3": 32px,
+    "p": 24px,
+    "button": 24px,
+    "nav": 28px
+);
+
+// Colores de fondo
+$background-gradient: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+
+// button
+$button-background:(
+    "normal":rgba(0,243,187,1),
+    "hover": linear-gradient(225deg, #0000FE 0%, #00F0B8 100%)
+);
+
+$button-color: (
+    "normal":rgba(6,10,36,1),
+    "hover": rgba(255,255,255,1)
+);
 
 // text-link
 $link-color: (
