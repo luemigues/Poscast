@@ -11,6 +11,20 @@ body {
   max-width: 100vw;
 }
 
+h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
 h3 {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 24px;
@@ -103,7 +117,7 @@ header label {
   margin-right: 16px;
 }
 
-header label div {
+header label span {
   margin-left: inherit;
   text-align: center;
   width: 24px;
@@ -174,7 +188,7 @@ header input:checked ~ nav ul li a {
   padding-top: 6px 214px 6px 0px;
 }
 
-header input:checked ~ nav ul li:hover {
+header input:checked ~ nav ul li:active {
   text-decoration: line-through;
 }
 
@@ -188,7 +202,7 @@ main {
 }
 
 .hero h1 {
-  margin: 16px;
+  margin: 16px 0px;
 }
 
 .hero h1 .hello {
@@ -196,7 +210,6 @@ main {
 }
 
 .hero p {
-  margin: 16px;
   text-align: justify;
 }
 
@@ -274,15 +287,22 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-negative: 0.5;
+      flex-shrink: 0.5;
+}
+
+.entrevistas .invitados img {
+  width: 1024px;
+  margin: -1px;
 }
 
 .topicos {
-  margin: 48px 16px 42px;
+  margin: 48px 16px 6px;
 }
 
 .topicos h2 {
@@ -307,7 +327,7 @@ main {
 }
 
 .topicos .temas div {
-  margin: 36px;
+  margin-bottom: 36px;
 }
 
 .topicos .temas svg {
@@ -368,9 +388,9 @@ footer a {
   color: #060a24;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   body {
-    max-width: 100vw;
+    width: 100vw;
     overflow-x: hidden;
   }
   h1 {
@@ -523,8 +543,8 @@ footer a {
   .episodios {
     padding-top: 186px;
     padding-bottom: 233px;
-    -webkit-clip-path: polygon(0 9%, 100% 0, 100% 91%, 0 100%);
-            clip-path: polygon(0 9%, 100% 0, 100% 91%, 0 100%);
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+            clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
     background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
   }
   .episodios h2 {
@@ -541,19 +561,24 @@ footer a {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     justify-items: center;
     -ms-flex-line-pack: center;
         align-content: center;
   }
   .episodios .podcast div {
     height: 232px;
-    width: 47%;
+    width: 45%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+  .episodios .podcast div:first-child {
+    margin-bottom: 72px;
+  }
+  .episodios .podcast div:nth-child(2) {
+    margin-bottom: 72px;
   }
   .nosotros {
     margin: 0px;
@@ -591,7 +616,7 @@ footer a {
     margin-bottom: 24px;
   }
   .nosotros .sobre-nosotros p {
-    width: 464px;
+    max-width: 464px;
     text-align: left;
   }
   .entrevistas h2 {
