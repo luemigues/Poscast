@@ -165,7 +165,7 @@ header {
                             line-height: map-get($line-height, "nav");
                             color: map-get($text-color,"darkbackground");
 
-                            padding-top: 6px 214px 6px 0px;
+                            padding: 6px 214px 6px 0px;
                         }
 
                         &:active{
@@ -225,6 +225,10 @@ header {
                 margin: 11px 11px;
 
                 iframe{
+                    background-color: transparent;
+                    border: 0px;
+                    width: 100%;
+
                     .no-focus-outline{
                         height: 225px;
                     }
@@ -311,7 +315,7 @@ header {
         }
         
 
-        svg {
+        img {
             margin: 13px 0px;
             height: 104px;
             width: 104px;

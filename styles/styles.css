@@ -185,7 +185,7 @@ header input:checked ~ nav ul li a {
   font-weight: 400;
   line-height: 28px;
   color: white;
-  padding-top: 6px 214px 6px 0px;
+  padding: 6px 214px 6px 0px;
 }
 
 header input:checked ~ nav ul li:active {
@@ -233,6 +233,12 @@ main {
 
 .episodios .podcast div {
   margin: 11px 11px;
+}
+
+.episodios .podcast div iframe {
+  background-color: transparent;
+  border: 0px;
+  width: 100%;
 }
 
 .episodios .podcast div iframe .no-focus-outline {
@@ -330,7 +336,7 @@ main {
   margin-bottom: 36px;
 }
 
-.topicos .temas svg {
+.topicos .temas img {
   margin: 13px 0px;
   height: 104px;
   width: 104px;
@@ -638,12 +644,12 @@ footer a {
             justify-content: center;
   }
   .entrevistas .invitados img {
-    width: 480px;
+    width: 33.3%;
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
             flex-grow: 2;
-    -ms-flex-preferred-size: 480px;
-        flex-basis: 480px;
+    -ms-flex-preferred-size: 33.3%;
+        flex-basis: 33.3%;
   }
   .topicos {
     margin: 64px 200px 56px;
@@ -662,6 +668,9 @@ footer a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     text-align: center;
   }
   .topicos .temas div {
@@ -669,7 +678,7 @@ footer a {
     margin: 36px;
     width: 260px;
   }
-  .topicos .temas svg {
+  .topicos .temas img {
     margin: 29px 0px;
   }
   .novedades {
